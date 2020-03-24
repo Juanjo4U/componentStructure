@@ -7,7 +7,7 @@ import constants from "../../../utils/constants";
 const Wrapper = styled.View`
     padding: ${sizeNormalize(12)}px;
     borderRadius: ${sizeNormalize(10)}px;
-    borderWidth: .17px;
+    borderWidth: .25px;
     elevation: ${sizeNormalize(Platform.OS === 'ios' ? 10 : 6)};
     shadowColor: gray;
     shadowOpacity: 0.1;

@@ -25,7 +25,7 @@ export const TextInputWrapper = styled.View`
     height: ${({ h }) => h ? sizeNormalize(h) : sizeNormalize(34)}px;
     borderColor: ${({ bdc }) => bdc ? bdc : 'black'};
     borderStyle: solid;
-    borderBottomWidth: ${({ bw }) => bw ? bw : .17}px;
+    borderBottomWidth: ${({ bw }) => bw ? bw : .25}px;
 `
 
 export const TextInput = styled.TextInput`

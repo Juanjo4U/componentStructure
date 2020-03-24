@@ -1,10 +1,8 @@
 import React from "react";
 import BackgroundCard from "../../commonComponents/BackgroundWithCard/BackgroundCard";
-import Background from "./topCard";
-import Card from "./bottomCard";
+import Background from "./loginBackground";
 
-
-export default () =>
+export default ({ children }) =>
     <BackgroundCard background={<Background />} >
-        <Card />
+        {children}
     </BackgroundCard>
