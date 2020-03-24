@@ -1,9 +1,9 @@
 import React from "react";
-import { Dimensions } from "react-native";
 import styled from "styled-components/native";
+import { screenWidth } from "../../utils/screenSize";
+
 import { Label } from "../commonStyledComponents/commonStyledComponents";
 
-const screenWidth = Dimensions.get('window').width;
 
 const Wrapper = styled.View`
     width: ${screenWidth}px;

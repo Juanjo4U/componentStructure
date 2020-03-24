@@ -14,6 +14,7 @@ export default ({ items, onViewChange = () => { } }) => {
     useEffect(() => {
         onViewChange(active)
     }, [active])
+    
     return (
         <FlatList data={items}
             horizontal
