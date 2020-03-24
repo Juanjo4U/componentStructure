@@ -7,8 +7,8 @@ import { Content, Label } from "../../components/commonStyledComponents/commonSt
 
 export default () =>
     <Wrapper>
-        <Content p={10}>
-            <Label fs={20} m={10} fw='bold' >Acceder</Label>
+        <Content p={20}>
+            <Label fs={20} m={11} fw='bold' >Acceder</Label>
             <LoginForm />
             <LoginButton />
             <LoginLinks />

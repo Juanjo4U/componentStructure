@@ -8,6 +8,7 @@ export const Label = styled.Text`
     ${({ center }) => center && `textAlign: center`}
     ${({ m }) => m && `margin: ${sizeNormalize(m)}px;`}
     ${({ mh }) => mh && `marginHorizontal: ${sizeNormalize(mh)}px;`}
+    ${({ mv }) => mv && `marginVertical: ${sizeNormalize(mv)}px;`}
     ${({ c, underline }) => underline && `
         textDecorationLine: underline;
         textDecorationStyle: solid;
