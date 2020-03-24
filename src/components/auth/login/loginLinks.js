@@ -11,7 +11,7 @@ export default ({ register = () => { }, restorePassword = () => { } }) =>
             Recordar contraseña
         </Label>
 
-        <Label mh={15} >¿No tienes cuenta?
+        <Label mh={15} >¿No tienes cuenta?{' '}
             <Label onPress={register}
                 c={constants.linkColor}
                 underline
