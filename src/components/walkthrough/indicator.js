@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
+import constants from "./../../utils/constants";
 
 const Wrapper = styled.View`
     flex: .4;
@@ -12,7 +13,7 @@ const Indicator = styled.View`
     width: 7px;
     height: 7px;
     borderRadius: 7px;
-    backgroundColor: ${({ bg }) => bg ? '#ed2174' : `lightgray`};
+    backgroundColor: ${({ bg }) => bg ? constants.primaryColor : `lightgray`};
     marginHorizontal: 5px;
 `;
 
