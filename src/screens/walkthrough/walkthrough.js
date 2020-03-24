@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ButtonRounded from "../../components/commonComponents/ButtonRounded/ButtonRounded";
+import ButtonRounded from "../../components/commonComponents/Button/ButtonRounded";
 import Background from "../../components/walkthrough/background";
 import Indicator from "../../components/walkthrough/indicator";
 import Slider from "../../components/walkthrough/slider";

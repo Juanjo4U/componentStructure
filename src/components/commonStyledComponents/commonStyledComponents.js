@@ -1,11 +1,18 @@
+import { sizeNormalize } from "../../utils/adaptSizes";
 import styled from "styled-components/native";
 
 export const Label = styled.Text`
     color: ${({ c }) => c || 'black'};
-    fontSize: ${({ fs }) => fs || 15}px;
+    fontSize: ${({ fs }) => fs ? sizeNormalize(fs) : sizeNormalize(14)}px;
     ${({ fw }) => fw && `fontWeight: ${fw};`}
     ${({ center }) => center && `textAlign: center`}
-    ${({ m }) => m && `margin: ${m}px;`}
+    ${({ m }) => m && `margin: ${sizeNormalize(m)}px;`}
+    ${({ mh }) => mh && `marginHorizontal: ${sizeNormalize(mh)}px;`}
+    ${({ c, underline }) => underline && `
+        textDecorationLine: underline;
+        textDecorationStyle: solid;
+        textDecorationColor: ${c || 'black'};
+    `}
 `;
 
 export const Content = styled.View`
@@ -14,4 +21,5 @@ export const Content = styled.View`
     ${({ p }) => p && `padding: ${p}px;`}
     ${({ bg }) => bg && `backgroundColor: ${bg};`}
     ${({ center }) => center && `justifyContent: center; alignItems: center;`}
+    position: relative;
 `;
