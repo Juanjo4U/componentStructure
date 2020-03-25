@@ -14,7 +14,6 @@ const Scroll = styled.ScrollView``;
 
 const Button = styled.TouchableOpacity``;
 
-
 export default () =>
     <Wrapper>
         <Scroll contentContainerStyle={{ padding: 15 }} >

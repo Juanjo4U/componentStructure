@@ -4,7 +4,7 @@ import styled from "styled-components/native";
 import { sizeNormalize } from "../../../utils/adaptSizes";
 import constants from "../../../utils/constants";
 
-const Wrapper = styled.KeyboardAvoidingView`
+const Wrapper = styled.View`
     padding: ${sizeNormalize(12)}px;
     borderRadius: ${sizeNormalize(10)}px;
     borderWidth: .25px;

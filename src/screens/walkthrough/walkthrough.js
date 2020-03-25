@@ -1,17 +1,12 @@
 import React, { useState } from "react";
-import ButtonRounded from "../../components/commonComponents/Button/ButtonRounded";
+import { Content } from "../../components/commonStyledComponents/commonStyledComponents";
+import WalkthroughButton from "../../components/commonComponents/Button/ButtonRounded/ButtonRounded";
 import Background from "../../components/walkthrough/background";
 import Indicator from "../../components/walkthrough/indicator";
 import Slider from "../../components/walkthrough/slider";
-import styled from "styled-components/native";
 
 import hardCodes from "../../utils/hardCodes";
 const { list } = hardCodes;
-
-const Button = styled.TouchableOpacity`
-    flex: .7;
-    paddingHorizontal: 30px;
-`;
 
 export default () => {
     const [activeView, setActiveView] = useState({
@@ -30,9 +25,9 @@ export default () => {
         <Background uri={activeView.image}>
             <Indicator items={list} active={activeView.index} />
             <Slider items={list} onViewChange={onViewChange} />
-            <Button>
-                <ButtonRounded label='testing' upperCase />
-            </Button>
+            <Content f={.7} ph={30}>
+                <WalkthroughButton label='Empezar' />
+            </Content>
         </Background>
     )
 }

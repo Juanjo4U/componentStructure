@@ -4,7 +4,6 @@ import { screenWidth } from "../../utils/screenSize";
 
 import { Label } from "../commonStyledComponents/commonStyledComponents";
 
-
 const Wrapper = styled.View`
     width: ${screenWidth}px;
     paddingHorizontal: 15px;

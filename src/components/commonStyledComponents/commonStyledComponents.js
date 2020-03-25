@@ -10,6 +10,9 @@ export const Label = styled.Text`
     ${({ m }) => m && `margin: ${sizeNormalize(m)}px;`}
     ${({ mh }) => mh && `marginHorizontal: ${sizeNormalize(mh)}px;`}
     ${({ mv }) => mv && `marginVertical: ${sizeNormalize(mv)}px;`}
+    ${({ p }) => p && `padding: ${p}px;`}
+    ${({ ph }) => ph && `paddingHorizontal: ${sizeNormalize(ph)}px;`}
+    ${({ pv }) => pv && `paddingVertical: ${sizeNormalize(pv)}px;`}
     ${({ c, underline }) => underline && `
         textDecorationLine: underline;
         textDecorationStyle: solid;
@@ -20,7 +23,12 @@ export const Label = styled.Text`
 export const Content = styled.View`
     flex: ${({ f }) => f || 1};
     ${({ br }) => br && `borderRadius: 10px;`}
+    ${({ m }) => m && `margin: ${sizeNormalize(m)}px;`}
+    ${({ mh }) => mh && `marginHorizontal: ${sizeNormalize(mh)}px;`}
+    ${({ mv }) => mv && `marginVertical: ${sizeNormalize(mv)}px;`}
     ${({ p }) => p && `padding: ${p}px;`}
+    ${({ ph }) => ph && `paddingHorizontal: ${sizeNormalize(ph)}px;`}
+    ${({ pv }) => pv && `paddingVertical: ${sizeNormalize(pv)}px;`}
     ${({ bg }) => bg && `backgroundColor: ${bg};`}
     ${({ center }) => center && `justifyContent: center; alignItems: center;`}
     position: relative;

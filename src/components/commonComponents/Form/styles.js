@@ -3,7 +3,6 @@ import styled from "styled-components/native";
 import { sizeNormalize } from "../../../utils/adaptSizes";
 import constants from '../../../utils/constants'
 
-
 export const Container = styled.View`
     width: 96%;
     height: ${({ h }) => h ? sizeNormalize(h) : sizeNormalize(35)}px;

@@ -1,4 +1,4 @@
 import React from "react";
-import App from "./screens/auth/login";
+import App from "./screens/auth/signIn";
 
 export default () => <App />
