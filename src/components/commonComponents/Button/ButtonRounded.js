@@ -15,5 +15,5 @@ const Wrapper = styled.View`
 
 export default ({ label, upperCase }) =>
     <Wrapper>
-        {label && <Label c={constants.secondaryColor} >{upperCase ? label.toUpperCase() : label}</Label>}
+        {label && <Label c={constants.textSecondaryColor} >{upperCase ? label.toUpperCase() : label}</Label>}
     </Wrapper>

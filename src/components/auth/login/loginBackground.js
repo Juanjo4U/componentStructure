@@ -11,7 +11,12 @@ const Wrapper = styled.SafeAreaView`
 export default ({ }) =>
     <Wrapper>
         <Content f={.5} center>
-            <Label c='white' fw={900} fs={50} >Trainerer</Label>
-            <Label c='white' fs={20} center m={50}>Si tienes un objetivo, nosotros tenemos tu plan de entrenamiento</Label>
+            <Label c={constants.textSecondaryColor} fw={900} fs={50} >
+                Trainerer
+            </Label>
+            
+            <Label c={constants.textSecondaryColor} fs={20} center m={50}>
+                Si tienes un objetivo, nosotros tenemos tu plan de entrenamiento
+            </Label>
         </Content>
     </Wrapper>

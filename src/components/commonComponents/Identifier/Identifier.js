@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components/native";
 import { Label } from "../../commonStyledComponents/commonStyledComponents";
 import { sizeNormalize } from "../../../utils/adaptSizes";
+import constants from "../../../utils/constants";
 
 const Wrapper = styled.View`
     width: ${({ w }) => w ? sizeNormalize(w) : sizeNormalize(100)}px;
@@ -14,5 +15,5 @@ const Wrapper = styled.View`
 
 export default ({ color, label }) =>
     <Wrapper bg={color} >
-        <Label c='white' fs={12} >{label}</Label>
+        <Label c={constants.textSecondaryColor} fs={12} >{label}</Label>
     </Wrapper>

@@ -1,8 +1,9 @@
 import { sizeNormalize } from "../../utils/adaptSizes";
 import styled from "styled-components/native";
+import constants from "../../utils/constants";
 
 export const Label = styled.Text`
-    color: ${({ c }) => c || 'black'};
+    color: ${({ c }) => c || constants.textDefaultColor};
     fontSize: ${({ fs }) => fs ? sizeNormalize(fs) : sizeNormalize(14)}px;
     ${({ fw }) => fw && `fontWeight: ${fw};`}
     ${({ center }) => center && `textAlign: center`}
@@ -12,7 +13,7 @@ export const Label = styled.Text`
     ${({ c, underline }) => underline && `
         textDecorationLine: underline;
         textDecorationStyle: solid;
-        textDecorationColor: ${c || 'black'};
+        textDecorationColor: ${c || constants.textDefaultColor};
     `}
 `;
 

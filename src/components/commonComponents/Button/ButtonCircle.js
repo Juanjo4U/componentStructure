@@ -14,7 +14,7 @@ const Wrapper = styled.View`
 `;
 
 const Icon = styled(FontAwesomeIcon)`
-    color: ${constants.secondaryColor};
+    color: ${constants.textSecondaryColor};
     fontSize:  ${sizeNormalize(20)}px;
 `;
 
