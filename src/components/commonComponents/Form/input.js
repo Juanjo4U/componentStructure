@@ -6,8 +6,7 @@ const defaultAction = txt => console.log()
 
 const InputBase = ({ name, label, value, action = defaultAction, validator = {}, options = {}, onSubmitEditing }, ref) => {
     const input = ref || useRef();
-    const [color, setColor] = useState();
-    const [border, setBorder] = useState();
+    const [isValid, setValid] = useState(true);
 
     const defaultOptions = {
         editable: true,
@@ -33,15 +32,9 @@ const InputBase = ({ name, label, value, action = defaultAction, validator = {},
     const handleChange = txt => {
 
         let valid = generateValidator(txt, validator);
-
-        if (!valid) {
-            setColor(param.style.colors.error);
-            setBorder(1);
-            action({ name, valid })
-        } else {
-            setColor(param.style.colors.default);
-            setBorder(.5);
-
+        setValid(valid)
+        if (!valid) action({ name, valid })
+        else {
             if (!isNaN(txt) && !!txt) txt = Number(txt)
 
             if (txt != value) {
@@ -72,15 +65,13 @@ const InputBase = ({ name, label, value, action = defaultAction, validator = {},
         } >
             {label && <Label>{label}</Label>}
             <TextInputWrapper
-                bdc={color} bw={border} h={param.multiline ? param.style.size.comment : param.style.size.withoutLabel}
+                isValid={isValid} h={param.multiline ? param.style.size.comment : param.style.size.withoutLabel}
                 bg={!param.editable ? '#d9d7d7' : param.style.colors.background}
             >
                 {param.icon &&
                     <Icon
                         name={param.icon}
-                        color={color == param.style.colors.error ?
-                            param.style.colors.error : null
-                        }
+                        isValid={isValid}
                     />
                 }
                 <TextInput ref={input}

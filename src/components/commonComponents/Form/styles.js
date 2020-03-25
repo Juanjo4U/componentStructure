@@ -23,9 +23,9 @@ export const TextInputWrapper = styled.View`
     ${({ bg }) => bg ? 'backgroundColor: ' + bg : ''};
     width: 100%;
     height: ${({ h }) => h ? sizeNormalize(h) : sizeNormalize(34)}px;
-    borderColor: ${({ bdc }) => bdc ? bdc : 'black'};
+    borderColor: ${({ isValid }) => isValid ? constants.textDefaultColor : constants.textErrorColor};
     borderStyle: solid;
-    borderBottomWidth: ${({ bw }) => bw ? bw : .25}px;
+    borderBottomWidth: ${({ isValid }) => isValid ? .5 : 1}px;
 `
 
 export const TextInput = styled.TextInput`
@@ -38,6 +38,6 @@ export const Icon = styled(FontAwesomeIcon)`
     margin: 6px;
     width: 10%;
     fontSize: ${({ size }) => size ? sizeNormalize(size) : sizeNormalize(20)}px;
-    color: ${({ color }) => color ? color : constants.lightGrey};
+    color: ${({ isValid }) => isValid ? constants.lightGrey : constants.textErrorColor};
     justifyContent: center;
 `;

@@ -4,5 +4,6 @@ export default {
     lightGrey: 'lightgray',
     linkColor: 'darkturquoise',
     textDefaultColor: 'black',
-    textSecondaryColor: 'white'
+    textSecondaryColor: 'white',
+    textErrorColor: 'red'
 }
