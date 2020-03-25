@@ -1,21 +1,16 @@
 import React from "react";
-import styled from "styled-components/native";
 import { Label, Content } from "../../commonStyledComponents/commonStyledComponents";
+import Wrapper from "../authBackWrapper";
 import constants from "../../../utils/constants";
 
-const Wrapper = styled.SafeAreaView`
-    flex: 1;
-    backgroundColor: ${constants.primaryColor};
-`;
-
 export default ({ }) =>
-    <Wrapper>
+    <Wrapper color={constants.primaryColor}>
         <Content f={.5} center>
             <Label c={constants.textSecondaryColor} fw={900} fs={50} >
                 Trainerer
             </Label>
-            
-            <Label c={constants.textSecondaryColor} fs={20} center m={50}>
+
+            <Label c={constants.textSecondaryColor} fs={20} center m={40}>
                 Si tienes un objetivo, nosotros tenemos tu plan de entrenamiento
             </Label>
         </Content>

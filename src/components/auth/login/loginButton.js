@@ -9,6 +9,6 @@ const Wrapper = styled.TouchableOpacity`
 `;
 
 export default ({ action = () => { } }) =>
-    <Wrapper activeOpacity={.8} onPress={action}>
+    <Wrapper onPress={action} activeOpacity={.8}>
         <ButtonCircle icon='arrow-right' />
     </Wrapper>

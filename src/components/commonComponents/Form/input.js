@@ -75,7 +75,14 @@ const InputBase = ({ name, label, value, action = defaultAction, validator = {},
                 bdc={color} bw={border} h={param.multiline ? param.style.size.comment : param.style.size.withoutLabel}
                 bg={!param.editable ? '#d9d7d7' : param.style.colors.background}
             >
-                {param.icon && <Icon name={param.icon} />}
+                {param.icon &&
+                    <Icon
+                        name={param.icon}
+                        color={color == param.style.colors.error ?
+                            param.style.colors.error : null
+                        }
+                    />
+                }
                 <TextInput ref={input}
                     placeholder={param.placeholder ? param.placeholder : ''}
                     defaultValue={(value || value == 0) ? value.toString() : ''}

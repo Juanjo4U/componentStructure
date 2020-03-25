@@ -14,11 +14,11 @@ const Wrapper = styled.View`
 `;
 
 const Icon = styled(FontAwesomeIcon)`
-    color: ${constants.textSecondaryColor};
+    color: ${({ c }) => c || constants.textSecondaryColor};
     fontSize:  ${sizeNormalize(20)}px;
 `;
 
-export default ({ icon }) =>
-    <Wrapper>
-        <Icon name={icon} />
+export default ({ icon, iconColor, ButtonColor }) =>
+    <Wrapper bg={ButtonColor}>
+        <Icon name={icon} c={iconColor} />
     </Wrapper>
