@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components/native";
 import Identifier from "../../commonComponents/Identifier/Identifier";
-import { Label } from "../../commonStyledComponents/commonStyledComponents";
+import Charge from "../../commonComponents/chargePercent/label&Percentage";
+import { Label, Content } from "../../commonStyledComponents/commonStyledComponents";
+import { sizeNormalize } from "../../../utils/adaptSizes";
 
 const Wrapper = styled.View`
     width: 100%;
-    height: 200px;
+    height: 170px;
     flexDirection: row;
     marginVertical: 8px;
 `;
@@ -24,25 +26,48 @@ const Container = styled.View`
     padding: 10px;
 `;
 
-const Content = styled.View`
-    flex: ${({ f }) => f || 1};
-    ${({ br }) => br && `borderRadius: 10px;`}
-    padding: 10px;
+const Header = styled.View`
+    flex: ${({ f }) => f || .3};
+    flexDirection: row;
+    justifyContent: space-between;
+    alignItems: center;
 `;
 
-export default ({ image, id = {}, label = {} }) =>
+/* {
+    image: 'https://www.tom-archer.com/wp-content/uploads/2018/04/2--masai-at-sunset-serengeti.jpg',
+    id: {
+        color: 'green',
+        label: 'Natacion'
+    },
+    label: {
+        title: 'This is gonna be the title',
+        dayName: 'sábado',
+        duration: '2:00 horas',
+        distance: '46 kms',
+    },
+    activity: {
+        strengh: 0.5,
+        speed: 0.8,
+        resistance
+    }
+}, */
+
+export default ({ image, id = {}, label = {}, activity = {} }) =>
     <Wrapper>
-        <Image f={2} source={{ uri: image }} />
+        <Image f={1.3} source={{ uri: image }} />
         <Container f={4} >
-            <Content f={0.3} >
-                {id.label && <Identifier color={id.color} label={id.label} />}
-            </Content>
+            <Header f={.7} >
+                <Identifier color={id.color} label={id.label} />
+                <Label fw='200' fs={10} >{label.dayName}</Label>
+            </Header>
             <Content>
-                {label.title && <Label fw='bold' >{label.title}</Label>}
-                {label.subtitle && <Label fs={12} fw='200'>{label.subtitle}</Label>}
+                <Label fw='bold' >{label.title}</Label>
+                <Label fs={12} fw='200'>{label.duration + ' - ' + label.distance}</Label>
             </Content>
-            <Content f={3}>
-                {label.text && <Label fs={12} >{label.text}</Label>}
+            <Content f={1.3}>
+                <Charge label='Fuerza' percentage={activity.strengh} color='red' />
+                <Charge label='Velocidad' percentage={activity.speed} />
+                <Charge label='Recistencia' percentage={activity.resistance} color='yellow' />
             </Content>
         </Container>
     </Wrapper>

@@ -3,100 +3,237 @@ export default {
         {
             image: 'https://www.tom-archer.com/wp-content/uploads/2018/06/milford-sound-night-fine-art-photography-new-zealand.jpg',
             id: {
-                color: 'orange',
-                label: 'primero'
+                color: '#ed2174',
+                label: 'Ciclismo'
             },
             label: {
                 title: 'This is gonna be the title',
-                subtitle: 'This is gonna be the Subtitle',
-                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
+                dayName: 'sábado',
+                duration: '2:00 horas',
+                distance: '46 kms',
+            },
+            activity: {
+                strengh: 0.5,
+                speed: 0.8,
+                resistance: 0.7
             }
         },
         {
             image: 'https://www.tom-archer.com/wp-content/uploads/2017/03/tom-archer_custom-preset_www-tom-archer-com_.jpg',
             id: {
-                color: 'green',
-                label: 'segundo'
+                color: 'orange',
+                label: 'Running'
             },
             label: {
                 title: 'This is gonna be the title',
-                subtitle: 'This is gonna be the Subtitle',
-                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
+                dayName: 'jueves',
+                duration: '2:00 horas',
+                distance: '46 kms',
+            },
+            activity: {
+                strengh: 0.5,
+                speed: 0.8,
+                resistance: 0.7
             }
         },
         {
             image: 'https://www.tom-archer.com/wp-content/uploads/2018/04/2--masai-at-sunset-serengeti.jpg',
             id: {
-                color: '#ed2174',
-                label: 'tercero'
+                color: 'green',
+                label: 'Natacion'
             },
             label: {
                 title: 'This is gonna be the title',
-                subtitle: 'This is gonna be the Subtitle',
-                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
-            }
-        },
-        {
-            image: 'https://www.tom-archer.com/wp-content/uploads/2017/03/landscape-photography-tom-archer-17.jpg',
-            id: {
-                color: 'red',
-                label: 'cuarto'
+                dayName: 'sábado',
+                duration: '2:00 horas',
+                distance: '46 kms',
             },
-            label: {
-                title: 'This is gonna be the title',
-                subtitle: 'This is gonna be the Subtitle',
-                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
+            activity: {
+                strengh: 0.5,
+                speed: 0.8,
+                resistance: 0.7
             }
         },
         {
             image: 'https://www.tom-archer.com/wp-content/uploads/2018/06/milford-sound-night-fine-art-photography-new-zealand.jpg',
             id: {
-                color: '#572364',
-                label: 'quinto'
+                color: '#ed2174',
+                label: 'Ciclismo'
             },
             label: {
                 title: 'This is gonna be the title',
-                subtitle: 'This is gonna be the Subtitle',
-                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
+                dayName: 'sábado',
+                duration: '2:00 horas',
+                distance: '46 kms',
+            },
+            activity: {
+                strengh: 0.5,
+                speed: 0.8,
+                resistance: 0.7
             }
         },
         {
             image: 'https://www.tom-archer.com/wp-content/uploads/2017/03/tom-archer_custom-preset_www-tom-archer-com_.jpg',
             id: {
                 color: 'orange',
-                label: 'sexto'
+                label: 'Running'
             },
             label: {
                 title: 'This is gonna be the title',
-                subtitle: 'This is gonna be the Subtitle',
-                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
+                dayName: 'sábado',
+                duration: '2:00 horas',
+                distance: '46 kms',
+            },
+            activity: {
+                strengh: 0.5,
+                speed: 0.8,
+                resistance: 0.7
             }
         },
         {
             image: 'https://www.tom-archer.com/wp-content/uploads/2018/04/2--masai-at-sunset-serengeti.jpg',
             id: {
-                color: 'gray',
-                label: 'septimo'
+                color: 'green',
+                label: 'Natacion'
             },
             label: {
                 title: 'This is gonna be the title',
-                subtitle: 'This is gonna be the Subtitle',
-                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
+                dayName: 'sábado',
+                duration: '2:00 horas',
+                distance: '46 kms',
+            },
+            activity: {
+                strengh: 0.5,
+                speed: 0.8,
+                resistance: 0.7
             }
         },
         {
-            image: 'https://www.tom-archer.com/wp-content/uploads/2017/03/landscape-photography-tom-archer-17.jpg',
+            image: 'https://www.tom-archer.com/wp-content/uploads/2018/06/milford-sound-night-fine-art-photography-new-zealand.jpg',
             id: {
-                color: '#572364',
-                label: 'octavo'
+                color: '#ed2174',
+                label: 'Ciclismo'
             },
             label: {
                 title: 'This is gonna be the title',
-                subtitle: 'This is gonna be the Subtitle',
-                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
+                dayName: 'sábado',
+                duration: '2:00 horas',
+                distance: '46 kms',
+            },
+            activity: {
+                strengh: 0.5,
+                speed: 0.8,
+                resistance: 0.7
             }
         },
-
+        {
+            image: 'https://www.tom-archer.com/wp-content/uploads/2017/03/tom-archer_custom-preset_www-tom-archer-com_.jpg',
+            id: {
+                color: 'orange',
+                label: 'Running'
+            },
+            label: {
+                title: 'This is gonna be the title',
+                dayName: 'sábado',
+                duration: '2:00 horas',
+                distance: '46 kms',
+            },
+            activity: {
+                strengh: 0.5,
+                speed: 0.8,
+                resistance: 0.7
+            }
+        },
+        {
+            image: 'https://www.tom-archer.com/wp-content/uploads/2018/04/2--masai-at-sunset-serengeti.jpg',
+            id: {
+                color: 'green',
+                label: 'Natacion'
+            },
+            label: {
+                title: 'This is gonna be the title',
+                dayName: 'sábado',
+                duration: '2:00 horas',
+                distance: '46 kms',
+            },
+            activity: {
+                strengh: 0.5,
+                speed: 0.8,
+                resistance: 0.7
+            }
+        },
+        {
+            image: 'https://www.tom-archer.com/wp-content/uploads/2018/06/milford-sound-night-fine-art-photography-new-zealand.jpg',
+            id: {
+                color: '#ed2174',
+                label: 'Ciclismo'
+            },
+            label: {
+                title: 'This is gonna be the title',
+                dayName: 'sábado',
+                duration: '2:00 horas',
+                distance: '46 kms',
+            },
+            activity: {
+                strengh: 0.5,
+                speed: 0.8,
+                resistance: 0.7
+            }
+        },
+        {
+            image: 'https://www.tom-archer.com/wp-content/uploads/2018/04/2--masai-at-sunset-serengeti.jpg',
+            id: {
+                color: 'green',
+                label: 'Natacion'
+            },
+            label: {
+                title: 'This is gonna be the title',
+                dayName: 'sábado',
+                duration: '2:00 horas',
+                distance: '46 kms',
+            },
+            activity: {
+                strengh: 0.5,
+                speed: 0.8,
+                resistance: 0.7
+            }
+        },
+        {
+            image: 'https://www.tom-archer.com/wp-content/uploads/2018/04/2--masai-at-sunset-serengeti.jpg',
+            id: {
+                color: 'green',
+                label: 'Natacion'
+            },
+            label: {
+                title: 'This is gonna be the title',
+                dayName: 'sábado',
+                duration: '2:00 horas',
+                distance: '46 kms',
+            },
+            activity: {
+                strengh: 0.5,
+                speed: 0.8,
+                resistance: 0.7
+            }
+        },
+        {
+            image: 'https://www.tom-archer.com/wp-content/uploads/2018/06/milford-sound-night-fine-art-photography-new-zealand.jpg',
+            id: {
+                color: '#ed2174',
+                label: 'Ciclismo'
+            },
+            label: {
+                title: 'This is gonna be the title',
+                dayName: 'Domingo',
+                duration: '2:00 horas',
+                distance: '46 kms',
+            },
+            activity: {
+                strengh: 0.5,
+                speed: 0.8,
+                resistance: 0.7
+            }
+        },
     ],
 
     customizeOptions: [

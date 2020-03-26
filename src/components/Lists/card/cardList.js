@@ -20,6 +20,7 @@ export default ({ choices }) =>
                         image={item.image}
                         id={item.id}
                         label={item.label}
+                        activity={item.activity}
                     />
                 </Button>
             )}

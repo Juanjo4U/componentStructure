@@ -5,7 +5,7 @@ import { sizeNormalize } from "../../../utils/adaptSizes";
 import constants from "../../../utils/constants";
 
 const Wrapper = styled.View`
-    width: ${({ w }) => w ? sizeNormalize(w) : sizeNormalize(100)}px;
+    paddingHorizontal: ${sizeNormalize(10)}px;
     height: ${({ h }) => h ? sizeNormalize(h) : sizeNormalize(20)}px;
     justifyContent: center;
     alignItems: center;
