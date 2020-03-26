@@ -4,7 +4,7 @@ import Card from "./card";
 
 const Wrapper = styled.View`
     flex: 1;
-    backgroundColor: ${({ bg }) => bg || 'lightgray'};
+    backgroundColor: ghostwhite ;
 `;
 
 const Scroll = styled.ScrollView``;

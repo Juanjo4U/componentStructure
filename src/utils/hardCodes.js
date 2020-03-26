@@ -1,4 +1,9 @@
 export default {
+    sports: [
+        { label: 'Ciclismo' },
+        { label: 'Running' },
+        { label: 'Natacion' }
+    ],
     list: [
         {
             image: 'https://www.tom-archer.com/wp-content/uploads/2018/06/milford-sound-night-fine-art-photography-new-zealand.jpg',

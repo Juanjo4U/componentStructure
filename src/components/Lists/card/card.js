@@ -4,26 +4,30 @@ import Identifier from "../../commonComponents/Identifier/Identifier";
 import Charge from "../../commonComponents/chargePercent/label&Percentage";
 import { Label, Content } from "../../commonStyledComponents/commonStyledComponents";
 import { sizeNormalize } from "../../../utils/adaptSizes";
+import constants from "../../../utils/constants";
 
 const Wrapper = styled.View`
     width: 100%;
     height: 170px;
     flexDirection: row;
     marginVertical: 8px;
+    borderRadius: ${sizeNormalize(10)}px;
+    borderWidth: ${sizeNormalize(0.5)}px;
+    borderColor: ${constants.lightGrey};
 `;
 
 const Image = styled.Image`
     flex: ${({ f }) => f || 1};
-    borderBottomLeftRadius: 10px;
-    borderTopLeftRadius: 10px;
+    borderBottomLeftRadius: ${sizeNormalize(10)}px;
+    borderTopLeftRadius: ${sizeNormalize(10)}px;
 `;
 
 const Container = styled.View`
     flex: ${({ f }) => f || 1};
     backgroundColor: white;
-    borderTopRightRadius: 10px;
-    borderBottomRightRadius: 10px;
-    padding: 10px;
+    borderTopRightRadius: ${sizeNormalize(10)}px;
+    borderBottomRightRadius: ${sizeNormalize(10)}px;
+    padding: ${sizeNormalize(10)}px;
 `;
 
 const Header = styled.View`
@@ -32,25 +36,6 @@ const Header = styled.View`
     justifyContent: space-between;
     alignItems: center;
 `;
-
-/* {
-    image: 'https://www.tom-archer.com/wp-content/uploads/2018/04/2--masai-at-sunset-serengeti.jpg',
-    id: {
-        color: 'green',
-        label: 'Natacion'
-    },
-    label: {
-        title: 'This is gonna be the title',
-        dayName: 'sábado',
-        duration: '2:00 horas',
-        distance: '46 kms',
-    },
-    activity: {
-        strengh: 0.5,
-        speed: 0.8,
-        resistance
-    }
-}, */
 
 export default ({ image, id = {}, label = {}, activity = {} }) =>
     <Wrapper>
@@ -67,7 +52,7 @@ export default ({ image, id = {}, label = {}, activity = {} }) =>
             <Content f={1.3}>
                 <Charge label='Fuerza' percentage={activity.strengh} color='red' />
                 <Charge label='Velocidad' percentage={activity.speed} />
-                <Charge label='Recistencia' percentage={activity.resistance} color='yellow' />
+                <Charge label='Recistencia' percentage={activity.resistance} color='gold' />
             </Content>
         </Container>
     </Wrapper>
