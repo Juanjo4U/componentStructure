@@ -12,11 +12,24 @@ const Container = styled.View`
     borderRadius: ${sizeNormalize(10)}px;
 `;
 
-export default ({ icon, label, color, iconLabelColor }) =>
+export default ({ title, icon, label, color, iconLabelColor, fontSize, fontWeight }) =>
     <ShadowBox padding={15} color={color}>
         <Container>
             <IconComponentWrapper icon={icon} iconColor={iconLabelColor} >
-                {label && <Label c={iconLabelColor || constants.textThirdColor} fs={16} >{label}</Label>}
+                {title &&
+                    <Label
+                        c={iconLabelColor || constants.textThirdColor}
+                        fs={12}
+                        fw='300'>
+                        {title}
+                    </Label>}
+                {label &&
+                    <Label
+                        c={iconLabelColor || constants.textThirdColor}
+                        fs={fontSize}
+                        fw={fontWeight}>
+                        {label}
+                    </Label>}
             </IconComponentWrapper>
         </Container>
     </ShadowBox>

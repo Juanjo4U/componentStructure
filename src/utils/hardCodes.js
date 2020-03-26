@@ -123,12 +123,14 @@ export default {
     ],
     restorePassworMethods: [
         {
-            icon: 'heart',
-            label: 'Mantenerme en forma'
+            title: 'via SMS:',
+            icon: 'sms',
+            label: '···· ··· 325'
         },
         {
-            icon: 'chart-area',
-            label: 'Mejorar mi rendimiento'
+            title: 'via email:',
+            icon: 'envelope',
+            label: '·····nom@gmail.com'
         },
     ],
 }

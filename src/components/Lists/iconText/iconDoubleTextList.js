@@ -11,7 +11,7 @@ const Button = styled.TouchableOpacity`
     marginBottom: ${sizeNormalize(15)}px;
 `;
 
-export default ({ choices }) => {
+export default ({ choices, fontWeight }) => {
 
     const [selected, setSelected] = useState();
 
@@ -26,10 +26,12 @@ export default ({ choices }) => {
                     <Button key={index} onPress={() => onPress(index)} >
                         <IconText
                             color={selected === index ? constants.pickerSelected : null}
-                            fontSize={16}
-                            iconLabelColor={selected === index ? constants.textSecondaryColor : null}
+                            title={item.title}
                             icon={item.icon}
                             label={item.label}
+                            fontWeight='bold'
+                            fontSize={15.5}
+                            iconLabelColor={selected === index ? constants.textSecondaryColor : null}
                         />
                     </Button>
                 )}

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import Options from "../../Lists/iconText/iconTextList";
+import Options from "../../Lists/iconText/iconDoubleTextList";
 
 import hardCodes from "../../../utils/hardCodes";
 
