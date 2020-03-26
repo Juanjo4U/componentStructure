@@ -1,4 +1,4 @@
 import React from "react";
-import App from "./screens/record/record";
+import App from "./screens/auth/restorePassword";
 
 export default () => <App />

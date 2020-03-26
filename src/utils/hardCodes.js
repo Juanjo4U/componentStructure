@@ -120,5 +120,15 @@ export default {
             icon: 'chalkboard',
             label: 'Aprender a entrenar'
         },
-    ]
+    ],
+    restorePassworMethods: [
+        {
+            icon: 'heart',
+            label: 'Mantenerme en forma'
+        },
+        {
+            icon: 'chart-area',
+            label: 'Mejorar mi rendimiento'
+        },
+    ],
 }
