@@ -97,5 +97,28 @@ export default {
             }
         },
 
+    ],
+
+    customizeOptions: [
+        {
+            icon: 'heart',
+            label: 'Mantenerme en forma'
+        },
+        {
+            icon: 'chart-area',
+            label: 'Mejorar mi rendimiento'
+        },
+        {
+            icon: 'clipboard',
+            label: 'Controlar mi peso'
+        },
+        {
+            icon: 'stopwatch',
+            label: 'Participar en carreras'
+        },
+        {
+            icon: 'chalkboard',
+            label: 'Aprender a entrenar'
+        },
     ]
 }

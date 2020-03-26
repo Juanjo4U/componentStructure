@@ -32,4 +32,6 @@ export const Content = styled.View`
     ${({ bg }) => bg && `backgroundColor: ${bg};`}
     ${({ center }) => center && `justifyContent: center; alignItems: center;`}
     position: relative;
+    ${({ justifyCenter }) => justifyCenter && `justifyContent: center;`}
+    ${({ alignCenter }) => alignCenter && `alignItems: center;`}
 `;

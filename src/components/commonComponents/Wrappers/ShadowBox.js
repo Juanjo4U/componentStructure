@@ -5,17 +5,17 @@ import { sizeNormalize } from "../../../utils/adaptSizes";
 import constants from "../../../utils/constants";
 
 const Wrapper = styled.View`
-    padding: ${sizeNormalize(12)}px;
+    padding: ${({ p }) => p ? sizeNormalize(p) : sizeNormalize(12)}px;
     borderRadius: ${sizeNormalize(10)}px;
     borderWidth: .25px;
     elevation: ${sizeNormalize(Platform.OS === 'ios' ? 10 : 6)};
     shadowColor: gray;
     shadowOpacity: 0.1;
     shadowRadius: ${sizeNormalize(5)}px;
-    backgroundColor: ${constants.secondaryColor};
+    backgroundColor: ${({ bg }) => bg || constants.secondaryColor};
 `;
 
-export default ({ children }) =>
-    <Wrapper style={{ shadowOffset: { width: -1, height: 10 } }}>
+export default ({ children, padding, color }) =>
+    <Wrapper bg={color} p={padding} style={{ shadowOffset: { width: -1, height: 10 } }}>
         {children}
     </Wrapper>

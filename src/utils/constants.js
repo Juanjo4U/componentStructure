@@ -5,5 +5,7 @@ export default {
     linkColor: 'darkturquoise',
     textDefaultColor: 'black',
     textSecondaryColor: 'white',
-    textErrorColor: 'red'
+    textThirdColor: 'grey',
+    textErrorColor: 'red',
+    pickerSelected: 'lightskyblue'
 }
