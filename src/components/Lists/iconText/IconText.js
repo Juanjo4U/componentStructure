@@ -1,10 +1,10 @@
 import React from "react";
-import { Label } from "../commonStyledComponents/commonStyledComponents";
+import { Label } from "../../commonStyledComponents/commonStyledComponents";
 import styled from "styled-components/native";
-import { sizeNormalize } from "../../utils/adaptSizes";
-import ShadowBox from "../commonComponents/Wrappers/ShadowBox";
-import IconComponentWrapper from "../commonComponents/Wrappers/Icon&Component";
-import constants from "../../utils/constants";
+import { sizeNormalize } from "../../../utils/adaptSizes";
+import ShadowBox from "../../commonComponents/Wrappers/ShadowBox";
+import IconComponentWrapper from "../../commonComponents/Wrappers/Icon&Component";
+import constants from "../../../utils/constants";
 
 const Container = styled.View`
     width: 100%;
