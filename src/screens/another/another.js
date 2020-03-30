@@ -7,7 +7,7 @@ export const Wrapper = styled.View`
     justifyContent: center;
 `;
 
-export default () =>
+export default ({ navigation, route }) =>
     <Wrapper>
-        <Label center >this is another screen</Label>
+        <Label center >this is {route.name} screen</Label>
     </Wrapper>
