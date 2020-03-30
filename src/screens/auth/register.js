@@ -1,9 +1,9 @@
 import React from "react";
 import Wrapper from "../../components/auth/authBackWrapper";
-import SignInTitle from "../../components/auth/signIn/signInTitle";
-import SignInForm from "../../components/auth/signIn/signInForm";
-import SignInLinks from "../../components/auth/signIn/signInLinks";
-import SignInButton from "../../components/auth/signIn/SignInButton";
+import RegisterTitle from "../../components/auth/register/registerTitle";
+import RegisterForm from "../../components/auth/register/registerForm";
+import RegisterLinks from "../../components/auth/register/registerLinks";
+import RegisterButton from "../../components/auth/register/registerButton";
 import { Content } from "../../components/commonStyledComponents/commonStyledComponents";
 
 import styled from "styled-components/native";
@@ -15,11 +15,11 @@ const KeyboarAvoid = styled.KeyboardAvoidingView`
 export default ({ navigation: { navigate, ...navigation } }) =>
     <Wrapper goBack={() => navigation.goBack()}>
         <Content p={20}>
-            <SignInTitle />
+            <RegisterTitle />
             <KeyboarAvoid behavior='position'>
-                <SignInForm />
+                <RegisterForm />
             </KeyboarAvoid>
-            <SignInButton />
-            <SignInLinks logIn={() => navigate('login')} />
+            <RegisterButton />
+            <RegisterLinks logIn={() => navigate('login')} />
         </Content>
     </Wrapper>

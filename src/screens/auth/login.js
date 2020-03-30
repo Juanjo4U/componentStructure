@@ -11,6 +11,6 @@ export default ({ navigation: { navigate, ...navigation } }) =>
             <Label fs={20} m={11} fw='bold' >Acceder</Label>
             <LoginForm />
             <LoginButton action={() => navigate('home')} />
-            <LoginLinks register={() => navigate('signIn')} restorePassword={() => navigate('restorePassword')} />
+            <LoginLinks register={() => navigate('register')} restorePassword={() => navigate('restorePassword')} />
         </Content>
     </Wrapper>
