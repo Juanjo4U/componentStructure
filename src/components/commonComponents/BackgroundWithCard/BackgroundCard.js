@@ -36,7 +36,10 @@ export default ({ background, children }) => {
     useEffect(() => {
         Keyboard.addListener('keyboardDidShow', () => animation(finalValue))
         Keyboard.addListener('keyboardDidHide', () => animation(initialValue))
-        return () => { Keyboard.removeAllListeners() }
+        return () => {
+            Keyboard.removeAllListeners("keyboardDidShow");
+            Keyboard.removeAllListeners("keyboardDidHide");
+        }
     }, [])
 
     return (

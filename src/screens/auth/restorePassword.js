@@ -4,8 +4,8 @@ import { Content, Label } from "../../components/commonStyledComponents/commonSt
 import RestorePassOptions from "../../components/auth/restorePassword/restorePassOptions";
 import ButtonRounded from "../../components/commonComponents/Button/ButtonRounded/ButtonRounded";
 
-export default ({ }) =>
-    <Wrapper>
+export default ({ navigation: { navigate, ...navigation } }) =>
+    <Wrapper goBack={() => navigation.goBack()}>
         <Content padding={20}>
             <Label fs={20} fw='bold' mh={10} >Recordar Contraseña</Label>
             <Label mv={30} fw='200' mh={10}>Elige el sistema para restablecer tu contraseña</Label>

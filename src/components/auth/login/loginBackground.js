@@ -3,8 +3,8 @@ import { Label, Content } from "../../commonStyledComponents/commonStyledCompone
 import Wrapper from "../authBackWrapper";
 import constants from "../../../utils/constants";
 
-export default ({ }) =>
-    <Wrapper color={constants.primaryColor}>
+export default ({ goBack }) =>
+    <Wrapper goBack={goBack} color={constants.primaryColor}>
         <Content f={.5} center>
             <Label c={constants.textSecondaryColor} fw={900} fs={50} >
                 Trainerer

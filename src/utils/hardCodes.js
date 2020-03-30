@@ -16,6 +16,7 @@ export default {
                 dayName: 'sábado',
                 duration: '2:00 horas',
                 distance: '46 kms',
+                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
             },
             activity: {
                 strengh: 0.5,
@@ -34,6 +35,7 @@ export default {
                 dayName: 'jueves',
                 duration: '2:00 horas',
                 distance: '46 kms',
+                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
             },
             activity: {
                 strengh: 0.5,
@@ -52,6 +54,7 @@ export default {
                 dayName: 'sábado',
                 duration: '2:00 horas',
                 distance: '46 kms',
+                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
             },
             activity: {
                 strengh: 0.5,
@@ -70,6 +73,7 @@ export default {
                 dayName: 'sábado',
                 duration: '2:00 horas',
                 distance: '46 kms',
+                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
             },
             activity: {
                 strengh: 0.5,
@@ -88,6 +92,7 @@ export default {
                 dayName: 'sábado',
                 duration: '2:00 horas',
                 distance: '46 kms',
+                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
             },
             activity: {
                 strengh: 0.5,
@@ -106,6 +111,7 @@ export default {
                 dayName: 'sábado',
                 duration: '2:00 horas',
                 distance: '46 kms',
+                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
             },
             activity: {
                 strengh: 0.5,
@@ -124,6 +130,7 @@ export default {
                 dayName: 'sábado',
                 duration: '2:00 horas',
                 distance: '46 kms',
+                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
             },
             activity: {
                 strengh: 0.5,
@@ -142,6 +149,7 @@ export default {
                 dayName: 'sábado',
                 duration: '2:00 horas',
                 distance: '46 kms',
+                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
             },
             activity: {
                 strengh: 0.5,
@@ -160,6 +168,7 @@ export default {
                 dayName: 'sábado',
                 duration: '2:00 horas',
                 distance: '46 kms',
+                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
             },
             activity: {
                 strengh: 0.5,
@@ -178,6 +187,7 @@ export default {
                 dayName: 'sábado',
                 duration: '2:00 horas',
                 distance: '46 kms',
+                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
             },
             activity: {
                 strengh: 0.5,
@@ -196,6 +206,7 @@ export default {
                 dayName: 'sábado',
                 duration: '2:00 horas',
                 distance: '46 kms',
+                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
             },
             activity: {
                 strengh: 0.5,
@@ -214,6 +225,7 @@ export default {
                 dayName: 'sábado',
                 duration: '2:00 horas',
                 distance: '46 kms',
+                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
             },
             activity: {
                 strengh: 0.5,
@@ -232,6 +244,7 @@ export default {
                 dayName: 'Domingo',
                 duration: '2:00 horas',
                 distance: '46 kms',
+                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
             },
             activity: {
                 strengh: 0.5,

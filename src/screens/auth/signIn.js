@@ -12,14 +12,14 @@ const KeyboarAvoid = styled.KeyboardAvoidingView`
     flex: 2.4;
 `;
 
-export default ({ }) =>
-    <Wrapper>
+export default ({ navigation: { navigate, ...navigation } }) =>
+    <Wrapper goBack={() => navigation.goBack()}>
         <Content p={20}>
             <SignInTitle />
             <KeyboarAvoid behavior='position'>
                 <SignInForm />
             </KeyboarAvoid>
             <SignInButton />
-            <SignInLinks />
+            <SignInLinks logIn={() => navigate('login')} />
         </Content>
     </Wrapper>

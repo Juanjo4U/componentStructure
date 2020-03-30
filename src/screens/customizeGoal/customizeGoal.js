@@ -11,12 +11,12 @@ const Wrapper = styled.SafeAreaView`
     backgroundColor: ${({ bg }) => bg || constants.secondaryColor};
 `;
 
-export default ({ }) =>
+export default ({ navigation: { navigate } }) =>
     <Wrapper>
         <Label mv={Platform.OS === 'ios' ? 10 : 30} fw='bold' center>¿Cuál es tu objetivo?</Label>
         <GoalSelector />
         <Content f={.1} pv={15} ph={50}>
-            <ButtonRounded label='Continuar' />
+            <ButtonRounded label='Continuar' action={() => navigate('bottom')} />
         </Content>
-        <Label m={10} center c={constants.textThirdColor} >Omitir</Label>
+        <Label onPress={() => navigate('bottom')} m={10} center c={constants.textThirdColor} >Omitir</Label>
     </Wrapper>
