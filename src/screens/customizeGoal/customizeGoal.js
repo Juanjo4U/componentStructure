@@ -8,6 +8,7 @@ import constants from "../../utils/constants";
 
 const Wrapper = styled.SafeAreaView`
     flex: 1;
+    backgroundColor: ${({ bg }) => bg || constants.secondaryColor};
 `;
 
 export default ({ }) =>
