@@ -10,7 +10,7 @@ const Wrapper = styled.View`
 `;
 
 const Container = styled.SafeAreaView`
-    backgroundColor: ${constants.secondaryColor};
+    backgroundColor: ${constants.backgroundColor};
     width: 100%;
     height: 45%;
     borderTopLeftRadius: ${sizeNormalize(25)}px;

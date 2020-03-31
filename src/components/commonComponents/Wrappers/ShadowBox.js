@@ -12,7 +12,7 @@ const Wrapper = styled.View`
     shadowColor: gray;
     shadowOpacity: 0.1;
     shadowRadius: ${sizeNormalize(5)}px;
-    backgroundColor: ${({ bg }) => bg || constants.secondaryColor};
+    backgroundColor: ${({ bg }) => bg || constants.backgroundColor};
 `;
 
 export default ({ children, padding, color }) =>

@@ -24,7 +24,7 @@ const Image = styled.Image`
 
 const Container = styled.View`
     flex: ${({ f }) => f || 1};
-    backgroundColor: ${({ bg }) => bg || constants.secondaryColor};
+    backgroundColor: ${({ bg }) => bg || constants.backgroundColor};
     borderTopRightRadius: ${sizeNormalize(10)}px;
     borderBottomRightRadius: ${sizeNormalize(10)}px;
     padding: ${sizeNormalize(10)}px;

@@ -8,7 +8,7 @@ import { sizeNormalize } from "../../utils/adaptSizes";
 
 const Wrapper = styled.SafeAreaView`
     flex: 1;
-    backgroundColor: ${({ bg }) => bg || constants.secondaryColor};
+    backgroundColor: ${({ bg }) => bg || constants.backgroundColor};
 `;
 
 const Header = styled.View`

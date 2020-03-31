@@ -6,7 +6,7 @@ import { sizeNormalize } from "../../utils/adaptSizes";
 
 const Wrapper = styled.View`
     flex: 1;
-    backgroundColor: ${({ bg }) => bg || constants.secondaryColor};
+    backgroundColor: ${({ bg }) => bg || constants.backgroundColor};
     paddingHorizontal: ${sizeNormalize(10)}px;
     justifyContent: center;
     alignItems: center;

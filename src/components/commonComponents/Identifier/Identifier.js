@@ -9,7 +9,7 @@ const Wrapper = styled.View`
     height: ${({ h }) => h ? sizeNormalize(h) : sizeNormalize(20)}px;
     justifyContent: center;
     alignItems: center;
-    backgroundColor: ${({ bg }) => bg || 'lightgray'};
+    backgroundColor: ${({ bg }) => bg || constants.lightGrey};
     borderRadius: 5px;
 `;
 
