@@ -31,7 +31,7 @@ export default ({ children, color }) => {
                 <Button onPress={() => navigation.goBack()} activeOpacity={.8}>
                     <ButtonCircle
                         ButtonColor={color || constants.secondaryColor}
-                        icon='arrow-left'
+                        icon={constants.IconBack}
                         iconColor={color ? constants.textSecondaryColor : constants.textDefaultColor} />
                 </Button>
             </Header>

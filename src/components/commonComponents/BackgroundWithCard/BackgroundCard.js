@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Animated, Keyboard, Platform } from "react-native";
+import { Animated, Keyboard, Platform, StatusBar } from "react-native";
 import styled from "styled-components/native";
 import { screenHeight } from "../../../utils/screenSize";
 import { sizeNormalize } from "../../../utils/adaptSizes";
@@ -44,6 +44,7 @@ export default ({ background, children }) => {
 
     return (
         <Wrapper>
+            <StatusBar hidden={Platform.OS === 'ios' ? true : false} />
             {background}
             <AnimatedContainer style={{ height: AnimatedValue }}>
                 {children}

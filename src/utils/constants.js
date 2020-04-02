@@ -1,4 +1,5 @@
 export default {
+    /******          Colors           *****/
     primaryColor: '#ed2174',
     secondaryColor: 'white',
     backgroundColor: 'white',
@@ -8,5 +9,7 @@ export default {
     textSecondaryColor: 'white',
     textThirdColor: 'grey',
     textErrorColor: 'red',
-    pickerSelected: 'lightskyblue'
+    pickerSelected: 'lightskyblue',
+    /******          Icons           *****/
+    IconBack: 'arrow-left'
 }
