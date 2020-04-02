@@ -18,7 +18,8 @@ export default ({ choices, getSelected = () => { } }) => {
     }
     return (
         <Wrapper>
-            <Scroll horizontal contentContainerStyle={{ padding: 10 }} >
+            <Scroll horizontal showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{ padding: 10 }} >
                 <Button onPress={() => onPress(null)} >
                     <Option label='Todo' isActive={!selected ? true : false} />
                 </Button>

@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import record from "../../screens/record/record";
+import record from "../../screens/bottomNavigation/record/record";
 import another from "../../screens/another/another";
 
 const Tab = createBottomTabNavigator();

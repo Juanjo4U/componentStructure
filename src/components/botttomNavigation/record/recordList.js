@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components/native";
-import CardList from "../Lists/card/cardList";
+import CardList from "../../Lists/card/cardList";
 import Tabs from "./recorListTabs";
 
-import hardCodes from "../../utils/hardCodes";
+import hardCodes from "../../../utils/hardCodes";
 const { list, sports } = hardCodes;
 
 const Wrapper = styled.View`

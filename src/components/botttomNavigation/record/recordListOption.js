@@ -1,8 +1,8 @@
 import React from "react";
-import { Label } from "../commonStyledComponents/commonStyledComponents";
+import { Label } from "../../commonStyledComponents/commonStyledComponents";
 import styled from "styled-components/native";
-import constants from "../../utils/constants";
-import { sizeNormalize } from "../../utils/adaptSizes";
+import constants from "../../../utils/constants";
+import { sizeNormalize } from "../../../utils/adaptSizes";
 
 const Wrapper = styled.View`
     flex: 1;
