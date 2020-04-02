@@ -1,7 +1,12 @@
 import React from "react";
-import { SafeArea as Wrapper, Label } from "../../components/commonStyledComponents/commonStyledComponents";
-
+import Wrapper from "../../components/commonComponents/Wrappers/backWrapper";
+import { Scroll } from "../../components/commonStyledComponents/commonStyledComponents";
+import UserData from "../../components/user/profile/picture&Name";
+import ProfileOptions from "../../components/user/profile/profileOptions";
 export default ({ route }) =>
     <Wrapper>
-        <Label>{route.name}</Label>
+        <Scroll contentContainerStyle={{ paddingHorizontal: 20 }}>
+            <UserData />
+            <ProfileOptions />
+        </Scroll>
     </Wrapper>

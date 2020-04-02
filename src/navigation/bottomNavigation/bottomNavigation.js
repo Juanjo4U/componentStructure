@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import record from "../../screens/bottomScreens/record/record";
 import more from "../../screens/bottomScreens/more/more";
 import another from "../../screens/another/another";
+import profile from "../../screens/user/profile";
 
 const Tab = createBottomTabNavigator();
 
@@ -21,4 +22,8 @@ export default () =>
             name="more"
             component={more}
             options={{ tabBarIcon: (props) => <Icon name='ellipsis-h' {...props} /> }} />
+        <Tab.Screen
+            name="profile"
+            component={profile}
+            options={{ tabBarIcon: (props) => <Icon name='user' {...props} /> }} />
     </Tab.Navigator>

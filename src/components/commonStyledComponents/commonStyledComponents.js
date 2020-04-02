@@ -22,6 +22,7 @@ export const SafeArea = styled(Platform.OS === 'ios' ? SafeAreaView : SafeAreaVi
 
 export const Content = styled.View`
     flex: ${({ f }) => f || 1};
+    ${({ row }) => row && `flexDirection: row;`}
     ${({ br }) => br && `borderRadius: 10px;`}
     ${({ m }) => m && `margin: ${sizeNormalize(m)}px;`}
     ${({ mh }) => mh && `marginHorizontal: ${sizeNormalize(mh)}px;`}
@@ -35,6 +36,8 @@ export const Content = styled.View`
     ${({ justifyCenter }) => justifyCenter && `justifyContent: center;`}
     ${({ alignCenter }) => alignCenter && `alignItems: center;`}
 `;
+
+export const Scroll = styled.ScrollView``;
 
 export const Label = styled.Text`
     color: ${({ c }) => c || constants.textDefaultColor};

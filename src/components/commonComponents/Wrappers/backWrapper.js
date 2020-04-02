@@ -42,7 +42,7 @@ export default ({ children, RouteNameHidden }) => {
                     }
                 </Button>
             </Header>
-            <Content p={10} >
+            <Content>
                 {children}
             </Content>
         </Wrapper >

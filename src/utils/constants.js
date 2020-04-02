@@ -11,5 +11,6 @@ export default {
     textErrorColor: 'red',
     pickerSelected: 'lightskyblue',
     /******          Icons           *****/
-    IconBack: 'arrow-left'
+    IconBack: 'arrow-left',
+    IconNext: 'arrow-right',
 }
