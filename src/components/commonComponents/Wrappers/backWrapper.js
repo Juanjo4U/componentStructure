@@ -37,7 +37,7 @@ export default ({ children, RouteNameHidden }) => {
                             c={constants.textDefaultColor}
                             fw='bold'
                             mh={7}>
-                            {route.name}
+                            {route.name[0].toUpperCase() + route.name.slice(1)}
                         </Label>
                     }
                 </Button>

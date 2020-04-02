@@ -23,12 +23,12 @@ const Button = styled.TouchableOpacity`
 `;
 
 export default ({ children, color }) => {
-    const navigation = useNavigation();
+    const { goBack } = useNavigation();
     return (
         <Wrapper bg={color} >
             <StatusBar hidden={Platform.OS === 'ios' ? true : false} />
             <Header>
-                <Button onPress={() => navigation.goBack()} activeOpacity={.8}>
+                <Button onPress={() => goBack()} activeOpacity={.8}>
                     <ButtonCircle
                         ButtonColor={color || constants.secondaryColor}
                         icon={constants.IconBack}

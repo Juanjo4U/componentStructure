@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import Option from "./Options";
+import Option from "../../Lists/listsWithNavigation/iconText&arrowIconList";
 import { sizeNormalize } from "../../../utils/adaptSizes";
 
 const Wrapper = styled.View`

@@ -5,6 +5,6 @@ import hardCodes from "../../../utils/hardCodes";
 
 export default ({ name = 'Nombre Deportista' }) =>
     <>
-        <Picture image={hardCodes.list[3].image} />
+        <Picture image={hardCodes.list[2].image} />
         <Label center fw='bold' fs={17} mv={15} >{name}</Label>
     </>
