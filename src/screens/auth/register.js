@@ -12,8 +12,8 @@ const KeyboarAvoid = styled.KeyboardAvoidingView`
     flex: 2.4;
 `;
 
-export default ({ navigation: { navigate, ...navigation } }) =>
-    <Wrapper goBack={() => navigation.goBack()}>
+export default ({ navigation: { navigate } }) =>
+    <Wrapper>
         <Content p={20}>
             <RegisterTitle />
             <KeyboarAvoid behavior='position'>

@@ -5,8 +5,8 @@ import LoginButton from "../../components/auth/login/loginButton";
 import LoginLinks from "../../components/auth/login/loginLinks";
 import { Content, Label } from "../../components/commonStyledComponents/commonStyledComponents";
 
-export default ({ navigation: { navigate, ...navigation } }) =>
-    <Wrapper goBack={() => navigation.goBack()}>
+export default ({ navigation: { navigate } }) =>
+    <Wrapper>
         <Content p={20}>
             <Label fs={20} m={11} fw='bold' >Acceder</Label>
             <LoginForm />

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import { Platform, StatusBar } from "react-native";
 import styled from "styled-components/native";
 import { Content } from "../commonStyledComponents/commonStyledComponents";
@@ -21,18 +22,22 @@ const Button = styled.TouchableOpacity`
     bottom: ${sizeNormalize(Platform.OS === 'ios' ? 0 : -10)}px;
 `;
 
-export default ({ children, goBack = () => { }, color }) =>
-    <Wrapper bg={color} >
-        <StatusBar hidden={Platform.OS === 'ios' ? true : false} />
-        <Header>
-            <Button onPress={goBack} activeOpacity={.8}>
-                <ButtonCircle
-                    ButtonColor={color || constants.secondaryColor}
-                    icon='arrow-left'
-                    iconColor={color ? constants.textSecondaryColor : constants.textDefaultColor} />
-            </Button>
-        </Header>
-        <Content >
-            {children}
-        </Content>
-    </Wrapper>
+export default ({ children, color }) => {
+    const navigation = useNavigation();
+    return (
+        <Wrapper bg={color} >
+            <StatusBar hidden={Platform.OS === 'ios' ? true : false} />
+            <Header>
+                <Button onPress={() => navigation.goBack()} activeOpacity={.8}>
+                    <ButtonCircle
+                        ButtonColor={color || constants.secondaryColor}
+                        icon='arrow-left'
+                        iconColor={color ? constants.textSecondaryColor : constants.textDefaultColor} />
+                </Button>
+            </Header>
+            <Content >
+                {children}
+            </Content>
+        </Wrapper>
+    )
+}
