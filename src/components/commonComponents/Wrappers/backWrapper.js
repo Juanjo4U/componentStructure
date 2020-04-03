@@ -3,7 +3,7 @@ import { Platform, StatusBar } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome5";
 import styled from "styled-components/native";
-import { SafeArea as Wrapper, Content, Label } from "../../commonStyledComponents/commonStyledComponents";
+import { Content, Label } from "../../commonStyledComponents/commonStyledComponents";
 import constants from "../../../utils/constants";
 import { sizeNormalize } from "../../../utils/adaptSizes";
 
@@ -28,7 +28,7 @@ export default ({ children, RouteNameHidden }) => {
     const navigation = useNavigation();
     const route = useRoute();
     return (
-        <Wrapper bg={constants.backgroundColor} >
+        <Content bg={constants.backgroundColor} >
             <Header>
                 <Button onPress={() => navigation.goBack()} activeOpacity={.8}>
                     <Icon name={constants.IconBack} c={constants.textDefaultColor} />
@@ -45,6 +45,6 @@ export default ({ children, RouteNameHidden }) => {
             <Content>
                 {children}
             </Content>
-        </Wrapper >
+        </Content >
     )
 }

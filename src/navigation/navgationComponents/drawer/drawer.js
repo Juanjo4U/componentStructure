@@ -3,15 +3,10 @@ import logo from "../../../assets/logo/logo";
 import constants from "../../../utils/constants";
 import { sizeNormalize } from "../../../utils/adaptSizes";
 import styled from "styled-components/native";
-import { Label } from "../../../components/commonStyledComponents/commonStyledComponents";
+import { Label, SafeArea as SafeAreaView } from "../../../components/commonStyledComponents/commonStyledComponents";
 import Button from "../../../components/commonComponents/Button/ButtonIconText/ButtonIconText";
 import options from "./drawerOptions";
 import hardCodes from "../../../utils/hardCodes";
-
-const SafeAreaView = styled.SafeAreaView`
-    flex: 1;
-    backgroundColor: ${constants.backgroundColor};
-`;
 
 const Header = styled.View`
     alignItems: center;
@@ -51,7 +46,7 @@ const defaultAthlete = {
 }
 
 export default ({ navigation, athlete = defaultAthlete, isDrawerOpen = true, toggleDrawer, navigate, logOut, toggleModal }) =>
-    <SafeAreaView>
+    <SafeAreaView bg={constants.backgroundColor}>
         <Header>
             <Button
                 icon={isDrawerOpen ? 'times' : 'bars'}

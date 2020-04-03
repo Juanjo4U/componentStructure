@@ -1,11 +1,17 @@
 import React from "react";
+import { Platform, SafeAreaView } from "react-native";
+import { SafeAreaView as SafeAreaViewAndroid } from "react-native-safe-area-context";
 import Chat from "../../../components/chat/chat";
 import constants from "../../../utils/constants";
 import { sizeNormalize } from "../../../utils/adaptSizes";
 import logo from "../../../assets/logo/logo"
 import Option from "../../../components/commonComponents/Button/ButtonIconText/ButtonIconText";
 import styled from "styled-components/native";
-import { SafeArea } from "../../../components/commonStyledComponents/commonStyledComponents";
+
+const SafeArea = styled(Platform.OS === 'ios' ? SafeAreaView : SafeAreaViewAndroid)`
+    backgroundColor: ${constants.backgroundColor};
+`;
+
 
 const Wrapper = styled.View`
     backgroundColor: ${constants.backgroundColor};
@@ -20,7 +26,7 @@ const LogoButton = styled.TouchableOpacity``;
 const Logo = styled.Image``;
 
 export default ({ navigation }) =>
-    <SafeArea bg={constants.backgroundColor}>
+    <SafeArea>
         <Wrapper>
             <Option
                 icon={'bars'}

@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeArea as Wrapper } from "../../../components/commonStyledComponents/commonStyledComponents";
+import { Content as Wrapper } from "../../../components/commonStyledComponents/commonStyledComponents";
 import RecordList from "../../../components/botttomScreenComponents/record/recordList";
 import constants from "../../../utils/constants";
 
