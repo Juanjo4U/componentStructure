@@ -5,11 +5,12 @@ import record from "../../screens/bottomScreens/record/record";
 import more from "../../screens/bottomScreens/more/more";
 import another from "../../screens/another/another";
 import profile from "../../screens/user/profile";
+import constants from "../../utils/constants";
 
 const Tab = createBottomTabNavigator();
 
 export default () =>
-    <Tab.Navigator>
+    <Tab.Navigator tabBarOptions={{ activeTintColor: constants.primaryColor }}>
         <Tab.Screen
             name="record"
             component={record}

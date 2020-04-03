@@ -1,60 +1,7 @@
 import React from "react";
-import styled from "styled-components/native";
+import { Content as Wrapper } from "../../commonStyledComponents/commonStyledComponents";
 import Option from "../../Lists/listsWithNavigation/iconText&arrowIconList";
-import { sizeNormalize } from "../../../utils/adaptSizes";
-
-const Wrapper = styled.View`
-    flex: 1;
-`;
-
-const options = {
-    athleteData: [
-        {
-            icon: 'user',
-            label: 'Datos personales',
-            action: () => { }
-        },
-        {
-            icon: 'user',
-            label: 'Datos personales',
-            action: () => { }
-        },
-        {
-            icon: 'user',
-            label: 'Datos personales',
-            action: () => { }
-        },
-    ],
-    connections: [
-        {
-            icon: 'user',
-            label: 'Datos personales',
-            action: () => { }
-        },
-        {
-            icon: 'user',
-            label: 'Datos personales',
-            action: () => { }
-        }
-    ],
-    settings: [
-        {
-            icon: 'user',
-            label: 'Datos personales',
-            action: () => { }
-        },
-        {
-            icon: 'user',
-            label: 'Datos personales',
-            action: () => { }
-        },
-        {
-            icon: 'user',
-            label: 'Datos personales',
-            action: () => { }
-        },
-    ],
-}
+import options from "./options";
 
 export default ({ }) =>
     <Wrapper>

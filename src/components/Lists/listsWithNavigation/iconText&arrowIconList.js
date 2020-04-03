@@ -7,7 +7,7 @@ import { sizeNormalize } from "../../../utils/adaptSizes";
 
 const Wrapper = styled.View`
     width: 100%;
-    marginVertical: ${sizeNormalize(10)}px;
+    marginVertical: ${sizeNormalize(7)}px;
 `;
 
 const Button = styled.TouchableOpacity`
@@ -15,7 +15,11 @@ const Button = styled.TouchableOpacity`
     borderBottomColor: lightgray;
 `;
 
-export default ({ Choices = [] }) => {
+const WhiteSpace = styled.View`
+    ${({ h }) => h && `height: ${sizeNormalize(h)}px;`}
+`;
+
+export default ({ Choices = [], whiteSpaceBottom }) => {
     const { navigate } = useNavigation();
     return (
         <Wrapper>
@@ -27,6 +31,7 @@ export default ({ Choices = [] }) => {
                         <Option icon={item.icon} label={item.label} fontSize={13} />
                     </Button>
                 )}
+                {whiteSpaceBottom && <WhiteSpace h={whiteSpaceBottom} />}
             </ShadowBox>
         </Wrapper>
     )
