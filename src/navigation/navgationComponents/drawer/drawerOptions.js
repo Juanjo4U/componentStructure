@@ -1,5 +1,5 @@
 const style = {
-    bold: true,
+    fontWeight: 'bold',
 }
 
 export default [

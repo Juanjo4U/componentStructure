@@ -9,8 +9,20 @@ import constants from "../../utils/constants";
 
 const Tab = createBottomTabNavigator();
 
-export default () =>
-    <Tab.Navigator tabBarOptions={{ activeTintColor: constants.primaryColor }}>
+const background = {
+    inactiveBackgroundColor: constants.primaryColor,
+    activeBackgroundColor: '#BD0E54',
+    inactiveTintColor: 'white',
+    activeTintColor: 'white'
+}
+
+const withoutBackground = {
+    activeTintColor: constants.primaryColor,
+    inactiveTintColor: 'gray',
+}
+
+export default ({ bg }) =>
+    <Tab.Navigator tabBarOptions={bg ? background : withoutBackground}>
         <Tab.Screen
             name="record"
             component={record}
