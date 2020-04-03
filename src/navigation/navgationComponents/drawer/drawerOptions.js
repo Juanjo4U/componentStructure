@@ -43,7 +43,7 @@ export default [
     {
         label: "menu_logout",
         icon: 'sign-out-alt',
-        action: () => { },
+        action: (navigate) => { navigate('test') },
         style,
     }
 ]

@@ -72,7 +72,7 @@ export default ({ navigation, athlete = defaultAthlete, isDrawerOpen = true, tog
                 <Button key={index}
                     label={option.label}
                     icon={option.icon}
-                    action={() => option.action && option.action(navigate, logOut, toggleModal)}
+                    action={() => option.action && option.action(navigation.navigate, logOut, toggleModal)}
                     style={option.style}
                 />
             )}

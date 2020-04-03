@@ -42,7 +42,7 @@ export default {
         {
             icon: 'sign-out-alt',
             label: 'Cerrar sesión',
-            action: () => { }
+            action: (navigate) => { navigate('test') }
         },
     ],
 }

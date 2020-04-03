@@ -8,7 +8,7 @@ export default {
         {
             icon: 'user',
             label: 'Perfil',
-            action: () => { }
+            action: (navigate) => { navigate('profile') }
         },
         {
             icon: 'chart-area',

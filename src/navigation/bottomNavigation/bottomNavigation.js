@@ -13,7 +13,10 @@ const background = {
     inactiveBackgroundColor: constants.primaryColor,
     activeBackgroundColor: '#BD0E54',
     inactiveTintColor: 'white',
-    activeTintColor: 'white'
+    activeTintColor: 'white',
+    style: {
+        backgroundColor: constants.primaryColor
+    }
 }
 
 const withoutBackground = {
@@ -21,7 +24,21 @@ const withoutBackground = {
     inactiveTintColor: 'gray',
 }
 
-export default ({ bg }) =>
+const moreOpenDrawer = ({ navigation }) => {
+    navigation.openDrawer()
+    navigation.goBack()
+    React.useEffect(() => {
+        const unsubscribe = navigation.addListener('tabPress', e => {
+            // Prevent default behavior
+            e.preventDefault();
+            navigation.openDrawer()
+        });
+        return unsubscribe;
+    }, [navigation])
+    return <></>
+}
+
+export default ({ bg, moreOption }) =>
     <Tab.Navigator tabBarOptions={bg ? background : withoutBackground}>
         <Tab.Screen
             name="record"
@@ -32,11 +49,11 @@ export default ({ bg }) =>
             component={another}
             options={{ tabBarIcon: (props) => <Icon name='bolt' {...props} /> }} />
         <Tab.Screen
-            name="more"
-            component={more}
-            options={{ tabBarIcon: (props) => <Icon name='ellipsis-h' {...props} /> }} />
-        <Tab.Screen
             name="profile"
             component={profile}
             options={{ tabBarIcon: (props) => <Icon name='user' {...props} /> }} />
+        <Tab.Screen
+            name="more"
+            component={moreOption ? more : moreOpenDrawer}
+            options={{ tabBarIcon: (props) => <Icon name='ellipsis-h' {...props} /> }} />
     </Tab.Navigator>
