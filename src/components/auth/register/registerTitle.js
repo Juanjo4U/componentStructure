@@ -13,7 +13,7 @@ const Wrapper = styled.View`
 export default ({ }) =>
     <Wrapper>
         <Label fw='bold' fs={20} >
-            Creat nueva cuenta
+            Crear nueva cuenta
         </Label>
 
         <Label c={constants.primaryColor} fs={50} fw={900} mv={10} center >

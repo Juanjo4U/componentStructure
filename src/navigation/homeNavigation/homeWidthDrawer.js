@@ -5,9 +5,9 @@ import HomeBottom from "./homeNavigation";
 
 const Drawer = createDrawerNavigator();
 
-export default ({ widthHeader, bottomBG, moreOption }) =>
+export default () =>
     <Drawer.Navigator drawerContent={DrawerComponent} drawerStyle={{ width: '65%' }}>
         <Drawer.Screen name="homeBottom" >
-            {() => <HomeBottom withHeader={widthHeader} bottomBG={bottomBG} moreOption={moreOption} />}
+            {() => <HomeBottom />}
         </Drawer.Screen>
     </Drawer.Navigator>

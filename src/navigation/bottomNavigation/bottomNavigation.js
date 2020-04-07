@@ -1,59 +1,41 @@
 import React from "react";
-import Icon from "react-native-vector-icons/FontAwesome5";
+import FontAwesomeIcon from "react-native-vector-icons/FontAwesome5";
+import styled from "styled-components/native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import record from "../../screens/bottomScreens/record/record";
 import more from "../../screens/bottomScreens/more/more";
 import another from "../../screens/another/another";
 import profile from "../../screens/user/profile";
 import constants from "../../utils/constants";
+import { sizeNormalize } from "../../utils/adaptSizes";
 
-const Tab = createBottomTabNavigator();
+const Icon = styled(FontAwesomeIcon)`
+    fontSize: ${sizeNormalize(18)}px;
+`;
 
-const background = {
-    inactiveBackgroundColor: constants.primaryColor,
-    activeBackgroundColor: '#BD0E54',
-    inactiveTintColor: 'white',
-    activeTintColor: 'white',
-    style: {
-        backgroundColor: constants.primaryColor
-    }
-}
-
-const withoutBackground = {
+const tabBarOptions = {
     activeTintColor: constants.primaryColor,
     inactiveTintColor: 'gray',
 }
 
-const moreOpenDrawer = ({ navigation }) => {
-    navigation.openDrawer()
-    navigation.goBack()
-    React.useEffect(() => {
-        const unsubscribe = navigation.addListener('tabPress', e => {
-            // Prevent default behavior
-            e.preventDefault();
-            navigation.openDrawer()
-        });
-        return unsubscribe;
-    }, [navigation])
-    return <></>
-}
+const Tab = createBottomTabNavigator();
 
-export default ({ bg, moreOption }) =>
-    <Tab.Navigator tabBarOptions={bg ? background : withoutBackground}>
+export default () =>
+    <Tab.Navigator tabBarOptions={tabBarOptions}>
         <Tab.Screen
             name="record"
             component={record}
-            options={{ tabBarIcon: (props) => <Icon name='file-alt' {...props} /> }} />
+            options={{ tabBarIcon: props => <Icon name='file-alt' {...props} /> }} />
         <Tab.Screen
             name="another"
             component={another}
-            options={{ tabBarIcon: (props) => <Icon name='bolt' {...props} /> }} />
+            options={{ tabBarIcon: props => <Icon name='bolt' {...props} /> }} />
         <Tab.Screen
             name="profile"
             component={profile}
-            options={{ tabBarIcon: (props) => <Icon name='user' {...props} /> }} />
+            options={{ tabBarIcon: props => <Icon name='user' {...props} /> }} />
         <Tab.Screen
             name="more"
-            component={moreOption ? more : moreOpenDrawer}
-            options={{ tabBarIcon: (props) => <Icon name='ellipsis-h' {...props} /> }} />
+            component={more}
+            options={{ tabBarIcon: props => <Icon name='ellipsis-h' {...props} /> }} />
     </Tab.Navigator>

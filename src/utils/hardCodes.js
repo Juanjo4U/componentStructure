@@ -12,11 +12,11 @@ export default {
                 label: 'Ciclismo'
             },
             label: {
-                title: 'This is gonna be the title',
+                title: 'Márcate un objetivo',
                 dayName: 'sábado',
                 duration: '2:00 horas',
                 distance: '46 kms',
-                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
+                text: `¿Qué deseas conseguir? Estar en forma, mejorar tu rendimieno, controlar el peso, participar en una carrera...`
             },
             activity: {
                 strengh: 0.5,
@@ -31,11 +31,11 @@ export default {
                 label: 'Running'
             },
             label: {
-                title: 'This is gonna be the title',
+                title: 'Sigue tu plan de entrenamiento',
                 dayName: 'jueves',
                 duration: '2:00 horas',
                 distance: '46 kms',
-                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
+                text: `En función de tus característicasydisponibilidad, cada díatendrás nuevas sesiones de entrenamiento.`
             },
             activity: {
                 strengh: 0.5,
@@ -50,11 +50,11 @@ export default {
                 label: 'Natacion'
             },
             label: {
-                title: 'This is gonna be the title',
+                title: 'Controla tu evolución',
                 dayName: 'sábado',
                 duration: '2:00 horas',
                 distance: '46 kms',
-                text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`
+                text: `Trainerer analiza tuactividad realizada y te muestra elgráficode tu estado de forma y tu nivel de energía.`
             },
             activity: {
                 strengh: 0.5,
@@ -275,15 +275,13 @@ export default {
             icon: 'chalkboard',
             label: 'Aprender a entrenar'
         },
+        {
+            icon: 'sliders-h',
+            label: 'otro...'
+        },
     ],
     restorePassworMethods: [
         {
-            title: 'via SMS:',
-            icon: 'sms',
-            label: '···· ··· 325'
-        },
-        {
-            title: 'via email:',
             icon: 'envelope',
             label: '·····nom@gmail.com'
         },
