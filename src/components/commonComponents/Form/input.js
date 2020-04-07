@@ -47,7 +47,6 @@ const InputBase = ({ name, label, value, action = defaultAction, validator = {},
         }
 
     }
-    console.log('input TYpe: ', validator)
 
     useEffect(() => {
         let currentValue = input.current._lastNativeText === '' ? '' : input.current._lastNativeText || input.current._getText();
