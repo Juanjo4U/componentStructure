@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, forwardRef } from "react";
-import { Container, Label, TextInput, Icon, TextInputWrapper } from "./styles";
+import { Container, Label, TextInput, Icon, TextInputWrapper, Button } from "./styles";
 import { generateValidator } from "../../../utils/inputValidator";
 
 const defaultAction = txt => console.log()
@@ -29,6 +29,9 @@ const InputBase = ({ name, label, value, action = defaultAction, validator = {},
 
     const param = Object.assign(defaultOptions, options);
 
+    const [secure, setSecure] = useState(param.secure);
+    const toggleSecurity = () => setSecure(!secure)
+
     const handleChange = txt => {
 
         let valid = generateValidator(txt, validator);
@@ -44,6 +47,7 @@ const InputBase = ({ name, label, value, action = defaultAction, validator = {},
         }
 
     }
+    console.log('input TYpe: ', validator)
 
     useEffect(() => {
         let currentValue = input.current._lastNativeText === '' ? '' : input.current._lastNativeText || input.current._getText();
@@ -78,14 +82,19 @@ const InputBase = ({ name, label, value, action = defaultAction, validator = {},
                     placeholder={param.placeholder ? param.placeholder : ''}
                     defaultValue={(value || value == 0) ? value.toString() : ''}
                     onChangeText={handleChange}
-                    secureTextEntry={param.secure}
+                    secureTextEntry={secure}
                     keyboardType={param.keyboard}
                     editable={param.editable}
                     multiline={param.multiline}
                     onSubmitEditing={onSubmitEditing}
                 >
                 </TextInput>
-
+                {validator?.type == 'password' &&
+                    <Icon onPress={toggleSecurity}
+                        name={secure ? 'eye' : 'eye-slash'}
+                        isValid={true}
+                    />
+                }
             </TextInputWrapper>
 
         </Container>

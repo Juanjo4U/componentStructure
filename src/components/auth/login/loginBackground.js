@@ -10,7 +10,7 @@ export default ({ }) =>
                 Trainerer
             </Label>
 
-            <Label c={constants.textSecondaryColor} fs={20} center m={40}>
+            <Label c={constants.textSecondaryColor} fs={22} center m={40}>
                 Si tienes un objetivo, aquí está tu plan de entrenamiento
             </Label>
         </Content>
