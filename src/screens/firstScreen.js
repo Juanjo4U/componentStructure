@@ -16,9 +16,6 @@ export const Logo = styled.Image`
 
 export default ({ navigation: { navigate } }) => {
     const goToNextScreen = () => navigate('auth')
-    React.useEffect(() => {
-        setTimeout(goToNextScreen, 3000);
-    }, [])
     return (
         <Wrapper onPress={goToNextScreen}>
             <Content bg={constants.backgroundColor} justifyCenter>

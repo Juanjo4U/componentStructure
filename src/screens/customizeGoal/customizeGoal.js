@@ -1,18 +1,12 @@
 import React from "react";
 import { Platform } from "react-native";
-import { Content, Label } from "../../components/commonStyledComponents/commonStyledComponents";
-import styled from "styled-components/native";
+import { SafeArea as Wrapper, Content, Label } from "../../components/commonStyledComponents/commonStyledComponents";
 import GoalSelector from "../../components/customize/goalSelector";
 import ButtonRounded from "../../components/commonComponents/Button/ButtonRounded/ButtonRounded";
 import constants from "../../utils/constants";
 
-const Wrapper = styled.SafeAreaView`
-    flex: 1;
-    backgroundColor: ${({ bg }) => bg || constants.backgroundColor};
-`;
-
 export default ({ navigation: { navigate } }) =>
-    <Wrapper>
+    <Wrapper bg={constants.backgroundColor}>
         <Label mv={Platform.OS === 'ios' ? 10 : 30} fw='bold' center>¿Cuál es tu objetivo?</Label>
         <GoalSelector />
         <Content f={.1} pv={15} ph={50}>
