@@ -37,6 +37,8 @@ const Header = styled.View`
     alignItems: center;
 `;
 
+const getLabel = label => label.length <= 25 ? label : label.slice(0, 25) + '...'
+
 export default ({ image, id = {}, label = {}, activity = {} }) =>
     <Wrapper>
         <Image f={1.3} source={{ uri: image }} />
@@ -46,7 +48,7 @@ export default ({ image, id = {}, label = {}, activity = {} }) =>
                 <Label fw='200' fs={10} >{label.dayName}</Label>
             </Header>
             <Content>
-                <Label fw='bold' >{label.title}</Label>
+                <Label fw='bold' >{label.title && getLabel(label.title)}</Label>
                 <Label fs={12} fw='200'>{label.duration + ' - ' + label.distance}</Label>
             </Content>
             <Content f={1.3}>
