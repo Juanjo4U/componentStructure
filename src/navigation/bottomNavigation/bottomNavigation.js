@@ -3,9 +3,8 @@ import FontAwesomeIcon from "react-native-vector-icons/FontAwesome5";
 import styled from "styled-components/native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import record from "../../screens/bottomScreens/record/record";
-import more from "../../screens/bottomScreens/more/more";
+import more from "./moreStacks/more";
 import another from "../../screens/another/another";
-import profile from "../../screens/user/profile";
 import constants from "../../utils/constants";
 import { sizeNormalize } from "../../utils/adaptSizes";
 
@@ -23,17 +22,21 @@ const Tab = createBottomTabNavigator();
 export default () =>
     <Tab.Navigator tabBarOptions={tabBarOptions}>
         <Tab.Screen
-            name="record"
-            component={record}
-            options={{ tabBarIcon: props => <Icon name='file-alt' {...props} /> }} />
-        <Tab.Screen
-            name="another"
+            name="Resumen"
             component={another}
-            options={{ tabBarIcon: props => <Icon name='bolt' {...props} /> }} />
+            options={{ tabBarIcon: props => <Icon name='chart-bar' {...props} /> }} />
         <Tab.Screen
-            name="profile"
-            component={profile}
-            options={{ tabBarIcon: props => <Icon name='user' {...props} /> }} />
+            name="Entrenos"
+            component={another}
+            options={{ tabBarIcon: props => <Icon name='stopwatch' {...props} /> }} />
+        <Tab.Screen
+            name="Historial"
+            component={record}
+            options={{ tabBarIcon: props => <Icon name='clipboard' {...props} /> }} />
+        <Tab.Screen
+            name="Calendario"
+            component={another}
+            options={{ tabBarIcon: props => <Icon name='calendar-alt' {...props} /> }} />
         <Tab.Screen
             name="more"
             component={more}
