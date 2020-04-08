@@ -1,31 +1,43 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { getItemWidthLayout } from "../../utils/flatList-ItemsLayouts";
 import styled from "styled-components/native";
-import ContentCard from "./walkthroughContent";
 
 const FlatList = styled.FlatList`
     flex: 1;
 `;
 
-export default ({ items, onViewChange = () => { } }) => {
-    const [active, setActive] = useState({
-        viewableItems: []
+export default ({ items, activeItemIndex = 0, onViewChange = () => { }, component }) => {
+    
+    const flatList = useRef();
+
+    const [activeView, setActiveView] = useState({
+        viewableItems: [{ index: 0 }]
     })
 
     useEffect(() => {
-        onViewChange(active)
-    }, [active])
-    
+        onViewChange(activeView)
+    }, [activeView])
+
+    useEffect(() => {
+        flatList.current.scrollToItem({
+            animated: true,
+            item: items[activeItemIndex]
+        })
+    }, [activeItemIndex])
+
     return (
-        <FlatList data={items}
+        <FlatList ref={flatList}
+            data={items}
             horizontal
             pagingEnabled
             showsHorizontalScrollIndicator={false}
-            renderItem={ContentCard}
+            renderItem={component}
             keyExtractor={(_, index) => `${index}`}
-            onViewableItemsChanged={setActive}
+            onViewableItemsChanged={setActiveView}
             viewabilityConfig={{
                 itemVisiblePercentThreshold: 50,
             }}
+            getItemLayout={getItemWidthLayout}
         />
     )
 }

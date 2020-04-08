@@ -17,7 +17,7 @@ const Indicator = styled.View`
     marginHorizontal: 5px;
 `;
 
-export default ({ items, active }) =>
+export default ({ items, activeItemIndex }) =>
     <Wrapper>
-        {items.map((_, index) => <Indicator key={index} bg={active == index} />)}
+        {items.map((_, index) => <Indicator key={index} bg={activeItemIndex === index} />)}
     </Wrapper>
