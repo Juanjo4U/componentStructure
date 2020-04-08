@@ -12,10 +12,11 @@ const Header = styled.View`
 `;
 
 const Button = styled.TouchableOpacity`
-    flex: 1;
     flexDirection: row;
-    padding: ${sizeNormalize(10)}px;
     alignItems: center;
+    padding: ${sizeNormalize(10)}px;
+    position: absolute;
+    left: ${sizeNormalize(5)}px;
 `;
 
 const Icon = styled(FontAwesomeIcon)`
