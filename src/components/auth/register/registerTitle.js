@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../../assets/logo/logo";
 import styled from "styled-components/native";
 import { Label } from "../../commonStyledComponents/commonStyledComponents";
 import constants from "../../../utils/constants";
@@ -10,13 +11,18 @@ const Wrapper = styled.View`
     marginBottom: ${sizeNormalize(10)}px;
 `;
 
+const Logo = styled.Image`
+    alignSelf: center;
+    width: 70%;
+    height: ${sizeNormalize(35)}px;
+    marginTop: ${sizeNormalize(17)}px;
+`;
+
 export default ({ }) =>
     <Wrapper>
         <Label fw='bold' fs={20} >
             Crear nueva cuenta
         </Label>
 
-        <Label c={constants.primaryColor} fs={50} fw={900} mv={10} center >
-            Trainerer
-        </Label>
+        <Logo source={logo} resizeMode='contain' />
     </Wrapper>

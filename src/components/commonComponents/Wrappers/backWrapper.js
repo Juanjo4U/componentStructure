@@ -1,15 +1,10 @@
 import React from "react";
-import { Platform, StatusBar } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome5";
 import styled from "styled-components/native";
 import { Content, Label } from "../../commonStyledComponents/commonStyledComponents";
 import constants from "../../../utils/constants";
 import { sizeNormalize } from "../../../utils/adaptSizes";
-
-const Header = styled.View`
-    flex: .1;
-`;
 
 const Button = styled.TouchableOpacity`
     flexDirection: row;
@@ -30,7 +25,7 @@ export default ({ children, RouteNameHidden }) => {
     const route = useRoute();
     return (
         <Content bg={constants.backgroundColor} >
-            <Header>
+            <Content f={.1}>
                 <Button onPress={() => navigation.goBack()} activeOpacity={.8}>
                     <Icon name={constants.IconBack} c={constants.textDefaultColor} />
                     {!RouteNameHidden &&
@@ -42,7 +37,7 @@ export default ({ children, RouteNameHidden }) => {
                         </Label>
                     }
                 </Button>
-            </Header>
+            </Content>
             <Content>
                 {children}
             </Content>

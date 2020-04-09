@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Animated, Keyboard, Platform, StatusBar } from "react-native";
+import { Animated, Keyboard, Platform } from "react-native";
 import styled from "styled-components/native";
 import { screenHeight } from "../../../utils/screenSize";
 import { sizeNormalize } from "../../../utils/adaptSizes";
@@ -27,10 +27,11 @@ export default ({ background, children }) => {
     const [AnimatedValue] = useState(new Animated.Value(initialValue));
 
     const animation = value => {
-        Animated.timing(AnimatedValue, {
-            toValue: value,
-            duration: 350,
-        }).start()
+        if (Platform.OS !== 'android')
+            Animated.timing(AnimatedValue, {
+                toValue: value,
+                duration: 350,
+            }).start()
     }
 
     useEffect(() => {
@@ -44,7 +45,6 @@ export default ({ background, children }) => {
 
     return (
         <Wrapper>
-            <StatusBar hidden={Platform.OS === 'ios' ? true : false} />
             {background}
             <AnimatedContainer style={{ height: AnimatedValue }}>
                 {children}
