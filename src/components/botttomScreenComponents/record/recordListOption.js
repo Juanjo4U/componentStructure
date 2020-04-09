@@ -5,22 +5,27 @@ import constants from "../../../utils/constants";
 import { sizeNormalize } from "../../../utils/adaptSizes";
 
 const Wrapper = styled.View`
-    flex: 1;
+    height: 40px;
     backgroundColor: ${({ bg }) => bg || constants.backgroundColor};
     paddingHorizontal: ${sizeNormalize(10)}px;
     justifyContent: center;
-    alignItems: center;
-    ${({ isActive }) => isActive && `
-        borderBottomColor: ${constants.primaryColor};
-        borderBottomWidth: ${sizeNormalize(2)}px;
-    `}
+`;
+
+const Underline = styled.View`
+    backgroundColor: ${constants.primaryColor};
+    width: 20px;
+    height: 3px;
+    marginLeft: ${sizeNormalize(10)}px;
+    position: absolute;
+    bottom: 0;
 `;
 
 export default ({ label, isActive }) =>
-    <Wrapper isActive={isActive} >
+    <Wrapper>
         <Label
             c={isActive ? constants.linkColor : constants.textThirdColor}
         >
             {label.toUpperCase()}
         </Label>
+        {isActive && <Underline />}
     </Wrapper>

@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components/native";
 import Option from "./recordListOption";
 
-const Wrapper = styled.View`
-    flex: .1;
-`;
+const Wrapper = styled.View``;
 
 const Scroll = styled.ScrollView``;
 
@@ -19,7 +17,7 @@ export default ({ choices, getSelected = () => { } }) => {
     return (
         <Wrapper>
             <Scroll horizontal showsHorizontalScrollIndicator={false}
-                contentContainerStyle={{ padding: 10 }} >
+                contentContainerStyle={{ paddingHorizontal: 10 }} >
                 <Button onPress={() => onPress(null)} >
                     <Option label='Todo' isActive={!selected ? true : false} />
                 </Button>

@@ -7,7 +7,7 @@ import { sizeNormalize } from "../../../utils/adaptSizes";
 
 const Wrapper = styled.View`
     width: 100%;
-    marginVertical: ${sizeNormalize(7)}px;
+    marginVertical: 10px;
 `;
 
 const Button = styled.TouchableOpacity`
