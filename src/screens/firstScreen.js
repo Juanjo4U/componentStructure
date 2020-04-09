@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo/logo";
+import { logoWhite as logo } from "../assets/logo/logo";
 import styled from "styled-components/native";
 import { Content } from "../components/commonStyledComponents/commonStyledComponents";
 import constants from "../utils/constants";
@@ -11,7 +11,7 @@ const Wrapper = styled.TouchableWithoutFeedback`
 `;
 
 export const Logo = styled.Image`
-    marginBottom: ${sizeNormalize((screenHeight / 2) / 3)}px;
+    marginBottom: ${sizeNormalize((screenHeight / 3.6))}px;
 `;
 
 export default ({ navigation: { navigate } }) => {
@@ -19,7 +19,7 @@ export default ({ navigation: { navigate } }) => {
     return (
         <Wrapper onPress={goToNextScreen}>
             <Content bg={constants.backgroundColor} justifyCenter>
-                <Content f={.93} bg={'#EB4185'} center >
+                <Content f={.93} bg={constants.primaryColor} center >
                     <Logo source={logo} />
                 </Content>
             </Content>
