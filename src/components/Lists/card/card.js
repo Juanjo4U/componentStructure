@@ -12,7 +12,7 @@ const Wrapper = styled.View`
     flexDirection: row;
     marginVertical: 8px;
     borderRadius: ${sizeNormalize(10)}px;
-    borderWidth: ${sizeNormalize(0.5)}px;
+    borderWidth: .5px;
     borderColor: ${constants.lightGrey};
 `;
 
