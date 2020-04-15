@@ -1,4 +1,5 @@
 import React from "react";
+import { Platform } from "react-native";
 import { logoWhite as logo } from "../assets/logo/logo";
 import styled from "styled-components/native";
 import { Content } from "../components/commonStyledComponents/commonStyledComponents";
@@ -11,6 +12,7 @@ const Wrapper = styled.TouchableWithoutFeedback`
 `;
 
 export const Logo = styled.Image`
+    marginLeft: -${sizeNormalize(18)}px;
     marginBottom: ${sizeNormalize((screenHeight / 3.6))}px;
 `;
 
@@ -19,7 +21,7 @@ export default ({ navigation: { navigate } }) => {
     return (
         <Wrapper onPress={goToNextScreen}>
             <Content bg={constants.backgroundColor} justifyCenter>
-                <Content f={.93} bg={constants.primaryColor} center >
+                <Content f={Platform.OS === 'ios' ? .93 : 96} bg={constants.primaryColor} center >
                     <Logo source={logo} />
                 </Content>
             </Content>

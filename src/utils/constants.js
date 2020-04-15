@@ -3,6 +3,7 @@ export default {
     primaryColor: '#ed2174',
     secondaryColor: 'white',
     backgroundColor: 'white',
+    borderGray: 'lightgray',
     lightGrey: 'lightgray',
     linkColor: 'darkturquoise',
     textDefaultColor: 'black',

@@ -7,7 +7,7 @@ const FlatList = styled.FlatList`
 `;
 
 export default ({ items, activeItemIndex = 0, onViewChange = () => { }, component }) => {
-    
+
     const flatList = useRef();
 
     const [activeView, setActiveView] = useState({
@@ -20,7 +20,7 @@ export default ({ items, activeItemIndex = 0, onViewChange = () => { }, componen
 
     useEffect(() => {
         flatList.current.scrollToItem({
-            animated: true,
+            animated: false,
             item: items[activeItemIndex]
         })
     }, [activeItemIndex])

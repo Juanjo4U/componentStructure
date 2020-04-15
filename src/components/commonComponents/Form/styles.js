@@ -22,7 +22,7 @@ export const TextInputWrapper = styled.View`
     ${({ bg }) => bg ? 'backgroundColor: ' + bg : ''};
     width: 100%;
     height: ${({ h }) => h ? sizeNormalize(h) : sizeNormalize(34)}px;
-    borderColor: ${({ isValid }) => isValid ? constants.textDefaultColor : constants.textErrorColor};
+    borderColor: ${({ isValid }) => isValid ? constants.borderGray : constants.textErrorColor};
     borderStyle: solid;
     borderBottomWidth: ${({ isValid }) => isValid ? .5 : 1}px;
 `

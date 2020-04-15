@@ -23,7 +23,7 @@ export default ({ choices }) => {
         <Wrapper>
             <Scroll contentContainerStyle={{ padding: 15 }} >
                 {choices.map((item, index) =>
-                    <Button key={index} onPress={() => onPress(index)} >
+                    <Button key={index} onPress={() => onPress(index)} activeOpacity={.8}>
                         <IconText
                             color={selected === index ? constants.pickerSelected : null}
                             fontSize={16}

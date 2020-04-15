@@ -7,7 +7,7 @@ import constants from "../../utils/constants";
 
 export default ({ navigation: { navigate } }) =>
     <Wrapper bg={constants.backgroundColor}>
-        <Label mv={Platform.OS === 'ios' ? 10 : 30} fw='bold' center>¿Cuál es tu objetivo?</Label>
+        <Label mv={Platform.OS === 'ios' ? 10 : 30} fw='bold' fs={18} center>¿Cuál es tu objetivo?</Label>
         <GoalSelector />
         <Content f={.1} pv={15} ph={50}>
             <ButtonRounded label='Continuar' action={() => navigate('bottom')} />

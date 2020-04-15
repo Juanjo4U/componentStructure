@@ -15,7 +15,7 @@ export default () =>
             validator={{}}
             options={{
                 icon: 'user',
-                placeholder: 'email'
+                placeholder: 'name'
             }}
         />
         <InputPassword

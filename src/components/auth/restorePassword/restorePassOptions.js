@@ -1,16 +1,13 @@
 import React from "react";
-import styled from "styled-components/native";
-import Options from "../../Lists/iconText/iconDoubleTextList";
-
-import hardCodes from "../../../utils/hardCodes";
-
-const { restorePassworMethods } = hardCodes;
-
-const Wrapper = styled.View`
-    flex: 1;
-`;
-
+import { Content as Wrapper } from "../../commonStyledComponents/commonStyledComponents";
+import { InputEmail } from "../../commonComponents/Form/input";
 export default ({ }) =>
-    <Wrapper>
-        <Options choices={restorePassworMethods} />
+    <Wrapper ph={10}>
+        <InputEmail
+            validator={{}}
+            options={{
+                icon: 'envelope',
+                placeholder: 'email'
+            }}
+        />
     </Wrapper>
